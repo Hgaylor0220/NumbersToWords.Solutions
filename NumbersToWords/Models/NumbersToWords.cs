@@ -35,16 +35,20 @@ namespace Game.Models
 
             public static Dictionary<int, string> millions = new Dictionary<int, string>(){{0, "one million"},{2, "two-million"},{3, "three-million"},{4, "four-million"},{5, "five-million"},{6, "six-million"},{7, "seven-million"},{8, "eight-million"},{9, "nine-million"}};
 
-            public void string Converter(string input)
+            public void Converter(string input)
             {
                 char[] numChars = input.ToCharArray();
                 int[] nums = new int[numChars.Length];
                 for(int i =0; i< input.Length; i++)
                 {
-                    nums[i] = numChars[numChars.Length-1-i];
-                    nums[i] *= (int)Math.Pow(10, i);
+                    nums[i] = numChars[numChars.Length-1-i]; // reversing the array position 
+                    nums[i] *= (int)Math.Pow(10, i); //returning the number with the pow of the index.
+
+                    //code in the teens...damn teens
+
+                
                 } 
-            }
+            } // return the input as a writen amount to the user
         }
     } 
 }
